@@ -50,7 +50,7 @@ https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSyst
 | hdfs dfs -chgrp hadoop file1                                | change group membership of a file                            |
 | hdfs dfs -chown huser file1                                 | change file ownership                                        |
 | hdfs dfs -rm  file1                                         | delete a file in hdfs                                        |
-| hdfs dfs -rmr mydir                                         | delete a directory or file in hdfs                           |
+| hdfs dfs -rmr mydir                                         | delete a directory or file in hdfs(삭제의 재귀 버전입니다. -skipTrash 옵션이 지정되면 휴지통이 활성화된 경우 무시되고 지정된 파일이 즉시 삭제됩니다. 이는 할당량 초과 디렉토리에서 파일을 삭제해야 할 때 유용할 수 있습니다.)                           |
 | hdfs dfs -copyFromLocal <source> <destination>              | copy from local filesystem to hdfs                           |
 | hdfs dfs -copyToLocal <source> <destination>                | copy from hdfs ro. local filesystem                          |
 | hdfs dfs -put <source> <destination>                        | copy from remote location to HDFS                            |
