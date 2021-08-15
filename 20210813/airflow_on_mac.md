@@ -24,17 +24,16 @@ airflow db init
 
 airflow users create \
     --username admin \
-    --firstname Peter \
-    --lastname Parker \
+    --firstname Kil \
+    --lastname Jaeeun \
     --role Admin \
-    --email spiderman@superhero.org
-
+    --email rha3122@naver.com
 # start the web server, default port is 8080
-airflow webserver --port 8080
+airflow webserver --port 8080 > webserver.log &
 
 # start the scheduler
 # open a new terminal or else run webserver with ``-D`` option to run it as a daemon
-airflow scheduler
+airflow scheduler > scheduler.log &
 
 # visit localhost:8080 in the browser and use the admin account you just
 # created to login. Enable the example_bash_operator dag in the home page
